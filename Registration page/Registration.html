@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Sample Registration Page</title>
+    <style>
+        body {
+            background-color: rgb(230, 236, 240);
+        }
+        
+        form {
+            padding: 10px;
+            line-height: 10px
+        }
+        
+        main {
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            background: beige;
+        }
+        
+        .imgcontainer {
+            text-align: center;
+            /*border-radius: 500%;*/
+            margin: 20px 12px;
+        }
+        
+        p {
+            font-family: Open Sans;
+            color: black;
+            border-bottom: 1.50px solid black;
+            font-family: cursive;
+            color: black;
+        }
+        
+        button {
+            background-color: rgb(0, 0, 0);
+            cursor: pointer;
+            width: 100px;
+            height: 25px;
+        }
+        
+        button:hover {
+            opacity: 0.52;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <p style="color:rgb(69, 141, 10); 
+font-size:49.9px;  
+font-weight:bold;
+text-align:center;">
+        Registration form
+
+    </p>
+
+    <div class="imgcontainer">
+        <img src="login_icon.png" width="170px">
+        <img </div>
+
+
+        <form align="center">
+
+            <pre><b><p font-size:300%; font-family: Open Sans;>Birthday:  <select>
+  <option value="Day">Day</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>
+  <option value="25">25</option>
+  <option value="26">26</option>
+  <option value="27">27</option>
+  <option value="28">28</option>
+  <option value="29">29</option>
+  <option value="30">30</option>
+  <option value="31">31</option>
+</select>  <select>
+  <option value="Month">Month</option>
+  <option value="January">January</option>
+  <option value="February">February</option>
+  <option value="March">March</option>
+  <option value="April">April</option>
+  <option value="May">May</option>
+  <option value="June">June</option>
+  <option value="July">July</option>
+  <option value="August">August</option>
+  <option value="September">October</option>
+  <option value="November">November</option>
+  <option value="December">December</option>
+</select>    <select>
+  <option value="Year">Year</option>
+  <option value="2001">2001</option>
+  <option value="2002">2002</option>
+  <option value="2003">2003</option>
+  <option value="2004">2004</option>
+  <option value="2005">2005</option>
+  <option value="2006">2006</option>
+  <option value="2007">2007</option>
+  <option value="2008">2008</option>
+  <option value="2009">2009</option>
+  <option value="2010">2010</option>
+  <option value="2011">2011</option>
+  <option value="2012">2012</option>
+  <option value="2013">2013</option>
+  <option value="2014">2014</option>
+  <option value="2015">2015</option>
+  <option value="2016">2016</option>
+  <option value="2017">2017</option>
+  <option value="2018">2018</option>
+  <option value="2019">2019</option>
+</select>
+<br>
+*First name: 	 <input type="text" name="FirstName" value="" placeholder="Name"required><br>
+Middle name:	 <input type="text" name="MiddleName" value=""placeholder="Middle Name"><br>
+*Last name:	 <input type="text" name="LastName" value=""placeholder="Last Name" required><br>
+*Username: 	 <input type="text" id="usrname" name="usrname"placeholder="Username Name" required><br>
+*Password: 	 <input type="password" name="psw" placeholder="Password" id="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
+<input type="submit" value="Submit" >  
+<label>
+  <input type="checkbox" checked="checked" name="remember"> Remember me
+</label>
+<label style="color:red">* Must be filled out</label>
+</b>
+</style>
+</p>
+</pre>
+            <button type="button " class="cancelbtn " style="color:White">Cancel</button><br>
+            <span class="Password"><a href="# ">Forget password?</a></span>
+            <span><a href="C:\Users\Student\Desktop\JS Exercise File\Login page\Login.html">Already register?</a></span>
+    </div>
+    </form>
+
+    <div id="cursor" class="cursor--moved cursor--hidden" style="top: 231px; left: 1036px;"></div>
+
+    <script>
+        var myInput = document.getElementById("Password");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+
+        function
+        validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+        myInput.onfocus = function() {
+            document.getElementById("message").style.display = "block";
+        }
+        myInput.onblur = function() {
+            document.getElementById("message").style.display = "none";
+        }
+        myInput.onkeyup = function() {
+            var lowerCaseLetters = /[a-z]/g;
+            if (myInput.value.match(lowerCaseLetters)) {
+                letter.classList.remove("invalid");
+                letter.classList.add("valid");
+            } else {
+                letter.classList.remove("valid");
+                letter.classList.add("invalid");
+            }
+            var upperCaseLetters = /[A-Z]/g;
+            if (myInput.value.match(upperCaseLetters)) {
+                capital.classList.remove("invalid");
+                capital.classList.add("valid");
+            } else {
+                capital.classList.remove("valid");
+                capital.classList.add("invalid");
+            }
+            var numbers = /[0-9]/g;
+            if (myInput.value.match(numbers)) {
+                number.classList.remove("invalid");
+                number.classList.add("valid");
+            } else {
+                number.classList.remove("valid");
+                number.classList.add("invalid");
+            }
+            if (myInput.value.length >=
+                8) {
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+            } else {
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
